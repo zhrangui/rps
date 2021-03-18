@@ -1,4 +1,4 @@
-import Rps from './Rps';
+import Rps from './rps';
 import './App.css';
 
 function App() {
