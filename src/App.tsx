@@ -1,11 +1,13 @@
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Rps from './rps';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <Rps></Rps>
-    </div>
+    <Router>
+      <Route path="/" component={Rps} />
+      <Route path="/about" component={Rps} />
+    </Router>
   );
 }
 
