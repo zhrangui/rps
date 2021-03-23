@@ -254,7 +254,7 @@ export class OverView extends SampleBase {
           </GridComponent>
         </div>
         <style>
-          @import 'src/grid/Grid/style.css';
+          @import 'styles/grid/style.css';
         </style>
 
       </div>
