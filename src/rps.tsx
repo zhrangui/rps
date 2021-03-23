@@ -1,10 +1,8 @@
-import Button from './components/button'
+import { OverView } from './components/grid';
 function Rps() {
   return (
-    <div>
-      <Button></Button>
-    </div>
-  );
+    <OverView></OverView>
+    )
 }
 
 export default Rps;
