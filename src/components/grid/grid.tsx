@@ -10,6 +10,7 @@ import { Slider } from '@syncfusion/ej2-react-inputs';
 import { Query, DataManager, Predicate } from '@syncfusion/ej2-data';
 import { getData } from './data';
 import './grid-overview.css';
+import './style.css';
 
 
 function statusTemplate(props): any {
@@ -95,7 +96,6 @@ function statusdetails(props): any {
 }
 
 export class OverView extends SampleBase<{}, {}> {
-  
   public dReady: boolean = false;
   private dtTime: boolean = false;
   private isDataBound: boolean = false;
@@ -254,10 +254,6 @@ export class OverView extends SampleBase<{}, {}> {
             <Inject services={[Filter, VirtualScroll, Sort]} />
           </GridComponent>
         </div>
-        <style>
-          @import 'styles/grid/style.css';
-        </style>
-
       </div>
     )
   }
