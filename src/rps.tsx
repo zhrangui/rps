@@ -1,7 +1,7 @@
-import { OverView } from './components/grid/grid';
+import { SEODashboard } from './components/dashboard/analytics';
 function Rps() {
   return (
-    <OverView></OverView>
+    <SEODashboard />
     )
 }
 

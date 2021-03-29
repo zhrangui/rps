@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { SampleBase } from '../common/sample-base';

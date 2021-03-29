@@ -215,7 +215,7 @@
 }
 
 #target_dash .e-avatar.image {
-  background-image: url(./src/avatar/images/pic01.png);
+  /* background-image: url(./src/avatar/images/pic01.png); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
