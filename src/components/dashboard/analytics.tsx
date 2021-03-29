@@ -172,7 +172,7 @@ export class SEODashboard extends SampleBase<{}, {}> {
           }}>
           <Inject services={[Marker, MapsLegend, MapsTooltip]} />
           <LayersDirective>
-            <LayerDirective shapeData={new MapAjax('./src/dashboard-layout/world-map.json')}
+            <LayerDirective shapeData={new MapAjax('./dashboard/world-map.json')}
               shapePropertyPath='continent'
               shapeDataPath='continent'
               dataSource={datasource.default}
