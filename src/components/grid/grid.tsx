@@ -4,11 +4,11 @@ import { classList, Animation, createElement, closest, isNullOrUndefined } from 
 import { GridComponent, ColumnsDirective, ColumnDirective, Filter, IFilter, Inject, Grid, VirtualScroll, Sort, SelectionType, Selection } from '@syncfusion/ej2-react-grids';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { CheckBox } from '@syncfusion/ej2-react-buttons';
-import { orderDetails } from '../data/grid/data';
+import { orderDetails } from './data';
 import { SampleBase } from '../common/sample-base';
 import { Slider } from '@syncfusion/ej2-react-inputs';
 import { Query, DataManager, Predicate } from '@syncfusion/ej2-data';
-import { getData } from '../data/grid/data';
+import { getData } from './data';
 import './grid-overview.css';
 
 
@@ -94,7 +94,8 @@ function statusdetails(props): any {
   }
 }
 
-export class OverView extends SampleBase {
+export class OverView extends SampleBase<{}, {}> {
+  
   public dReady: boolean = false;
   private dtTime: boolean = false;
   private isDataBound: boolean = false;

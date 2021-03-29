@@ -1,4 +1,4 @@
-import { OverView } from './components/grid';
+import { OverView } from './components/grid/grid';
 function Rps() {
   return (
     <OverView></OverView>
