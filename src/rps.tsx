@@ -1,7 +1,9 @@
 import { SEODashboard } from './components/dashboard/analytics';
 function Rps() {
   return (
-    <SEODashboard />
+    <div>
+      RPS home
+    </div>
     )
 }
 
