@@ -5,8 +5,10 @@ import {
   Link
 } from "react-router-dom";
 import Rps from './rps';
-import { OverView } from './components/grid/grid';
 import { SEODashboard } from './components/dashboard/analytics';
+import { OverView } from './components/grid/grid';
+import { Treeview } from './components/treeview/treeview';
+
 import './App.scss';
 
 function App() {
@@ -23,6 +25,9 @@ function App() {
           <li>
             <Link to="/grid">Data grid</Link>
           </li>
+          <li>
+            <Link to="/treeview">Tree view</Link>
+          </li>
         </ul>
         <hr />
         <Switch>
@@ -34,6 +39,9 @@ function App() {
           </Route>
           <Route path="/grid">
             <OverView />
+          </Route>
+          <Route path="/treeview">
+            <Treeview />
           </Route>
         </Switch>
       </div>
