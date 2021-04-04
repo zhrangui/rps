@@ -5,6 +5,7 @@ import {
   Link
 } from "react-router-dom";
 import Rps from './rps';
+import { MenuBar } from './components/menu-bar/menu-bar';
 import { SEODashboard } from './components/dashboard/analytics';
 import { OverView } from './components/grid/grid';
 import { Treeview } from './components/treeview/treeview';
@@ -13,6 +14,8 @@ import './App.scss';
 
 function App() {
   return (
+    <div>
+    <MenuBar />
     <Router>
       <div>
         <ul>
@@ -46,6 +49,7 @@ function App() {
         </Switch>
       </div>
     </Router>
+    </div>
   );
 }
 
