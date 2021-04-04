@@ -4,6 +4,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import './common/localization/localization';
 import Rps from './rps';
 import { MenuBar } from './components/menu-bar/menu-bar';
 import { SEODashboard } from './components/dashboard/analytics';
