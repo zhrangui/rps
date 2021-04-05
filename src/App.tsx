@@ -1,9 +1,8 @@
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
-} from "react-router-dom";
+  Route} from "react-router-dom";
+import './common/internationalization/internationalization';
 import './common/localization/localization';
 import Rps from './rps';
 import { MenuBar } from './components/menu-bar/menu-bar';

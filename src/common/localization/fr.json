@@ -2,6 +2,10 @@
   "fr": {
     "grid": {},
     "pager": {},
-    "Button": {}
+    "Button": {},
+    "menuBar": {
+      "Component" : "C"
+    },
+    "calendar": { "today": "aujourdi" }
   }
 }

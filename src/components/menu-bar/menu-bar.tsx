@@ -1,6 +1,7 @@
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { Route } from 'react-router-dom';
+import { setCulture } from '@syncfusion/ej2-base';
 import { MenuComponent, MenuEventArgs, MenuItemModel } from '@syncfusion/ej2-react-navigations';
 import { SampleBase } from '../common/sample-base';
 import './menu-bar.css';
@@ -26,8 +27,8 @@ export class MenuBar extends SampleBase<{}, {}> {
       text: 'Language',
       iconCss: 'em-icons e-edit',
       items: [
-        { id: 'english', text: 'English' },
-        { id: 'french', text: 'French' }
+        { id: 'en-US', text: 'English' },
+        { id: 'fr', text: 'French' }
       ]
     },
   ];
@@ -40,8 +41,8 @@ export class MenuBar extends SampleBase<{}, {}> {
             <div className='menu-section'>
               <div className='menu-control'>
                 <MenuComponent items={this.menuItems} select={(menu: MenuEventArgs) => {
-                  if(menu.item.id === "english" || menu.item.id === "french") {
-
+                  if(menu.item.id === "en-US" || menu.item.id === "fr") {
+                    setCulture(menu.item.id)
                   } else {             
                     history.push(menu.item.id);
                   }
