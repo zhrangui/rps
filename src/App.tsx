@@ -15,42 +15,23 @@ import './App.scss';
 
 function App() {
   return (
-    <div>
-    <MenuBar />
     <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/dashboard">Dashboard</Link>
-          </li>
-          <li>
-            <Link to="/grid">Data grid</Link>
-          </li>
-          <li>
-            <Link to="/treeview">Tree view</Link>
-          </li>
-        </ul>
-        <hr />
-        <Switch>
-          <Route exact path="/">
-            <Rps />
-          </Route>
-          <Route path="/dashboard">
-            <SEODashboard />
-          </Route>
-          <Route path="/grid">
-            <OverView />
-          </Route>
-          <Route path="/treeview">
-            <Treeview />
-          </Route>
-        </Switch>
-      </div>
+      <MenuBar />
+      <Switch>
+        <Route exact path="/">
+          <Rps />
+        </Route>
+        <Route path="/dashboard">
+          <SEODashboard />
+        </Route>
+        <Route path="/grid">
+          <OverView />
+        </Route>
+        <Route path="/treeview">
+          <Treeview />
+        </Route>
+      </Switch>
     </Router>
-    </div>
   );
 }
 

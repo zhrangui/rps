@@ -1,5 +1,7 @@
 {
-  "grid": {},
-  "pager": {},
-  "Button": {}
+  "fr": {
+    "grid": {},
+    "pager": {},
+    "Button": {}
+  }
 }

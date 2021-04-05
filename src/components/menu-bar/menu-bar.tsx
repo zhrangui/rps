@@ -1,6 +1,7 @@
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { MenuComponent, MenuItemModel } from '@syncfusion/ej2-react-navigations';
+import { Route } from 'react-router-dom';
+import { MenuComponent, MenuEventArgs, MenuItemModel } from '@syncfusion/ej2-react-navigations';
 import { SampleBase } from '../common/sample-base';
 import './menu-bar.css';
 
@@ -8,75 +9,44 @@ import './menu-bar.css';
  * Menu default sample
  */
 export class MenuBar extends SampleBase<{}, {}> {
+
   // Menu items definition
   public menuItems: MenuItemModel[] = [
     {
-      text: 'File',
+      text: 'Component',
       iconCss: 'em-icons e-file',
       items: [
-        { text: 'Open', iconCss: 'em-icons e-open' },
-        { text: 'Save', iconCss: 'em-icons e-save' },
-        { separator: true },
-        { text: 'Exit' }
+        { id: '/', text: 'Home' },
+        { id: '/dashboard', text: 'Dashboard'},
+        { id: '/grid', text: 'Data grid' },
+        { id: '/treeview', text: 'Tree view' }
       ]
     },
     {
-      text: 'Edit',
+      text: 'Language',
       iconCss: 'em-icons e-edit',
       items: [
-        { text: 'Cut', iconCss: 'em-icons e-cut' },
-        { text: 'Copy', iconCss: 'em-icons e-copy' },
-        { text: 'Paste', iconCss: 'em-icons e-paste' }
+        { id: 'English', text: 'English' },
+        { id: 'French', text: 'French' }
       ]
     },
-    {
-      text: 'View',
-      items: [
-        {
-          text: 'Toolbars',
-          items: [
-            { text: 'Menu Bar' },
-            { text: 'Bookmarks Toolbar' },
-            { text: 'Customize' },
-          ]
-        },
-        {
-          text: 'Zoom',
-          items: [
-            { text: 'Zoom In' },
-            { text: 'Zoom Out' },
-            { text: 'Reset' },
-          ]
-        },
-        { text: 'Full Screen' }
-      ]
-    },
-    {
-      text: 'Tools',
-      items: [
-        { text: 'Spelling & Grammar' },
-        { text: 'Customize' },
-        { separator: true },
-        { text: 'Options' }
-      ]
-    },
-    {
-      text: 'Help'
-    }
   ];
-
 
   render() {
     return (
-      <div className='control-pane'>
-        <div className='control-section'>
-          <div className='menu-section'>
-            <div className='menu-control'>
-              <MenuComponent items={this.menuItems}></MenuComponent>
+      <Route render={({history}) => (
+        <div className='control-pane'>
+          <div className='control-section'>
+            <div className='menu-section'>
+              <div className='menu-control'>
+                <MenuComponent items={this.menuItems} select={(menu: MenuEventArgs) => {
+                  history.push(menu.item.id);
+                }}></MenuComponent>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    )
+      )}/>
+    );
   }
 }
