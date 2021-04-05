@@ -26,8 +26,8 @@ export class MenuBar extends SampleBase<{}, {}> {
       text: 'Language',
       iconCss: 'em-icons e-edit',
       items: [
-        { id: 'English', text: 'English' },
-        { id: 'French', text: 'French' }
+        { id: 'english', text: 'English' },
+        { id: 'french', text: 'French' }
       ]
     },
   ];
@@ -40,7 +40,11 @@ export class MenuBar extends SampleBase<{}, {}> {
             <div className='menu-section'>
               <div className='menu-control'>
                 <MenuComponent items={this.menuItems} select={(menu: MenuEventArgs) => {
-                  history.push(menu.item.id);
+                  if(menu.item.id === "english" || menu.item.id === "french") {
+
+                  } else {             
+                    history.push(menu.item.id);
+                  }
                 }}></MenuComponent>
               </div>
             </div>
