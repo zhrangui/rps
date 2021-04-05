@@ -40,7 +40,7 @@ export class MenuBar extends SampleBase<{}, {}> {
           <div className='control-section'>
             <div className='menu-section'>
               <div className='menu-control'>
-                <MenuComponent items={this.menuItems} select={(menu: MenuEventArgs) => {
+                <MenuComponent orientation="Vertical" items={this.menuItems} select={(menu: MenuEventArgs) => {
                   if(menu.item.id === "en-US" || menu.item.id === "fr") {
                     setCulture(menu.item.id)
                   } else {             
