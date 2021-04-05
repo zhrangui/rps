@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+.navbar-default {
+  background-color: #00a1ff;
+  border-color: none;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px
+}
+
+.container:after,.container:before {
+  content: " ";
+  display: table
+}
+
+.container:after {
+  clear: both
+}
+.navbar-brand {
+  height: auto;
+}
+.navbar-brand img {
+  width: 270px;
+}
+
+@media (max-width: 767px) {
+  .navbar-brand img {
+      width:185px;
+  }
+}

@@ -5,7 +5,7 @@ function Rps() {
   return (
     <div>
       RPS home
-      {/* <Calendar /> */}
+      <Calendar/>
     </div>
     )
 }
