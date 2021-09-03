@@ -1,0 +1,91 @@
+{
+  "name": "RealValue",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
+    "eject": "react-scripts eject"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/path/to/dir/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": -10
+      }
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "@hookform/resolvers": "^2.6.0",
+    "@material-ui/core": "^5.0.0-beta.4",
+    "@material-ui/icons": "^5.0.0-beta.4",
+    "@material-ui/lab": "^5.0.0-alpha.43",
+    "@material-ui/styles": "^5.0.0-beta.4",
+    "@material-ui/system": "^5.0.0-beta.4",
+    "@reduxjs/toolkit": "^1.6.1",
+    "@syncfusion/ej2": "^19.1.56",
+    "@syncfusion/ej2-base": "^19.1.56",
+    "@syncfusion/ej2-locale": "^19.1.54",
+    "@syncfusion/ej2-react-base": "^19.1.54",
+    "@syncfusion/ej2-react-charts": "^19.1.54",
+    "axios": "^0.21.1",
+    "cldr-data": "^36.0.0",
+    "date-fns": "^2.22.1",
+    "ramda": "^0.27.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.12.2",
+    "react-i18next": "^11.11.4",
+    "react-imask": "^6.1.0",
+    "react-number-format": "^4.7.3",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.0",
+    "redux-persist": "^6.0.0",
+    "web-vitals": "^2.0.1",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.1.9",
+    "@types/node": "^16.3.2",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-router-dom": "^5.1.7",
+    "node-sass": "^6.0.1",
+    "react-scripts": "^4.0.3"
+  }
+}

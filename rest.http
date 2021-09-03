@@ -1,0 +1,29 @@
+###
+POST https://realvalue-qa.rpsrealsolutions.com/api/Data/Valuation
+content-type: application/json
+
+{
+  "address": {
+    "unitNumber": "509",
+    "streetNumber": "133",
+    "streetName": "Wynford",
+    "streetType": "Drive",
+    "streetDirection": "",
+    "city": "North York",
+    "province": "ON",
+    "postalCode": "M3C0J5"
+  },
+  "hpt": {
+    "originalValue": 280000,
+    "originalDate": "201410",
+    "propertyStyle": 3,
+    "numMonthsTrend": 12,
+    "renovation": {
+      "type": "11",
+      "amount": 10000,
+      "date": "201510"
+    }
+  }
+}
+
+
