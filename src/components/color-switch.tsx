@@ -1,5 +1,5 @@
-import { alpha, styled } from '@material-ui/core/styles';
-import Switch, { SwitchProps } from '@material-ui/core/Switch';
+import { alpha, styled } from '@mui/material/styles';
+import Switch, { SwitchProps } from '@mui/material/Switch';
 
 const AzureSwitch = styled(Switch)(({ theme }) => ({
   '& .MuiSwitch-switchBase.Mui-checked': {

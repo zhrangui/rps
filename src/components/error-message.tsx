@@ -1,5 +1,5 @@
-import { Typography } from "@material-ui/core";
-import ErrorIcon from '@material-ui/icons/Error';
+import { Typography } from "@mui/material";
+import ErrorIcon from '@mui/icons-material/Error';
 
 const ErrorMessage: React.FC = ({ children }) => {
 

@@ -1,5 +1,5 @@
-import Slider from '@material-ui/core/Slider';
-import { styled } from '@material-ui/core';
+import Slider from '@mui/material/Slider';
+import { styled } from '@mui/material';
 
 interface Props {
   low: number,

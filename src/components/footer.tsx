@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import { useTheme } from '@material-ui/core';
-import { Box, Divider, Fab, Grid, Link, Stack, Typography, useScrollTrigger, Zoom } from "@material-ui/core";
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import { useTheme } from '@mui/material';
+import { Box, Divider, Fab, Grid, Link, Stack, Typography, useScrollTrigger, Zoom } from "@mui/material";
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 export default function Footer() {
   const { t } = useTranslation();

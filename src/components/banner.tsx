@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import { Paper, Typography, useTheme } from '@material-ui/core';
-import Stack from "@material-ui/core/Stack";
+import { Paper, Typography, useTheme } from '@mui/material';
+import Stack from "@mui/material/Stack";
 import React from 'react';
 
 export default function Banner() {

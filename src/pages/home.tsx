@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useHistory } from "react-router-dom"
 import { useTranslation } from 'react-i18next';
-import { Stack, useTheme } from '@material-ui/core';
+import { Stack, useTheme } from '@mui/material';
 import { useForm } from 'react-hook-form';
 
 import CanadaPostMap from '../services/canada-post-map';

@@ -1,5 +1,5 @@
-import { useMediaQuery, useTheme } from '@material-ui/core';
-import { Avatar, Typography, Fab, Radio, Stack } from '@material-ui/core';
+import { useMediaQuery, useTheme } from '@mui/material';
+import { Avatar, Typography, Fab, Radio, Stack } from '@mui/material';
 
 interface Props {
   value: number,

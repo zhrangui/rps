@@ -1,4 +1,4 @@
-import { useTheme } from '@material-ui/core';
+import { useTheme } from '@mui/material';
 import { render, screen } from '@testing-library/react';
 import { useSelector } from 'react-redux';
 import theme from '../../theme';
@@ -35,7 +35,7 @@ jest.mock('react-redux', () => ({
 const useSelectorMock = useSelector as jest.MockedFunction<typeof useSelector>;
 
 const mockTheme = theme;
-jest.mock('@material-ui/core', () => ({
+jest.mock('@mui/material', () => ({
   useTheme: jest.fn()
 }));
 

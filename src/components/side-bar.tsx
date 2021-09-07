@@ -1,11 +1,11 @@
 import React, { useState, forwardRef, useImperativeHandle } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useTheme } from '@material-ui/core';
-import Box from '@material-ui/core/Box';
-import Drawer from '@material-ui/core/Drawer';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import { ListItemButton, ListItemText } from '@material-ui/core';
+import { useTheme } from '@mui/material';
+import Box from '@mui/material/Box';
+import Drawer from '@mui/material/Drawer';
+import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
+import { ListItemButton, ListItemText } from '@mui/material';
 
 const sideBar = 'sideBar';
 const anchor = 'right';

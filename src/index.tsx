@@ -7,8 +7,8 @@ import {
   HashRouter
 } from 'react-router-dom';
 
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider } from '@mui/material/styles';
 import './i18n/config';
 import RealValue from './broker-portal';
 import theme from './theme';

@@ -1,4 +1,4 @@
-import { Button, useTheme } from "@material-ui/core";
+import { Button, useTheme } from "@mui/material";
 interface Props {
   active: boolean,
   children: React.ReactElement

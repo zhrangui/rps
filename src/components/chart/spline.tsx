@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { useTheme } from '@material-ui/core';
+import { useTheme } from '@mui/material';
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, SplineSeries, Tooltip } from '@syncfusion/ej2-react-charts';
 import PropertyAttributes from '../../services/types/property-attributes.type';
 import { NeighbourhoodValues, PropertyStyle } from '../../services/types/property-response.type';

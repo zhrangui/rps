@@ -5,8 +5,8 @@ import {
   Route,
   Link as RouterLink
 } from 'react-router-dom';
-import { Breadcrumbs, Typography, Link, Box, Container } from '@material-ui/core';
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import { Breadcrumbs, Typography, Link, Box, Container, Grid } from '@mui/material';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
 import AppBar from './components/app-bar';
 import Home from './pages/home';
@@ -25,13 +25,10 @@ function BrokerPortal() {
   return (
     <>
       <AppBar />
-      <Box mx={3}>
-        <Container maxWidth="sm">
+        <Container>
           <Breadcrumbs
             separator={<NavigateNextIcon fontSize="small" />}
-            sx={{
-              marginBottom: 1
-            }}>
+           >
             <Link color="inherit" href="/">
               {t('Home')}
             </Link>
@@ -57,7 +54,6 @@ function BrokerPortal() {
             </Route>
           </Switch>
         </Container>
-      </Box>
       <Footer />
     </>
   );

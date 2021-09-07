@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { AppBar as MuiAPpBar, Toolbar, Avatar, Box, Button, IconButton, Grid } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
+import { AppBar as MuiAPpBar, Toolbar, Avatar, Box, Button, IconButton, Grid } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
 
 import Banner from './banner'
 import SideBar from './side-bar';
