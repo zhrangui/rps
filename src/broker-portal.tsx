@@ -11,7 +11,7 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import AppBar from './components/app-bar';
 import Home from './pages/home';
 
-import { toTitleCase } from './common/utils';
+import { toTitleCase } from './utils/utils';
 
 import './broker_portal.scss';
 import Footer from './components/footer';

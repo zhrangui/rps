@@ -1,32 +1,21 @@
 import { useEffect, useState } from 'react';
 import { useHistory } from "react-router-dom"
 import { useTranslation } from 'react-i18next';
-import { Button, FormControlLabel, Grid, MenuItem, RadioGroup, Stack, TextField, Typography, useTheme } from '@material-ui/core';
-import { useForm, Controller } from 'react-hook-form';
+import { Stack, useTheme } from '@material-ui/core';
+import { useForm } from 'react-hook-form';
 
 import CanadaPostMap from '../services/canada-post-map';
-import AdapterDateFns from '@material-ui/lab/AdapterDateFns';
-import { DatePicker, LoadingButton, LocalizationProvider } from '@material-ui/lab';
 import { useSelector } from 'react-redux';
 
 import intl, { DateFormat } from '../common/internationalization';
 
 import { getPropertyResponse } from '../services/http-client';
 import PropertyRequest from '../services/types/property-request.type';
-import { PropertyStyle } from '../services/types/property-response.type';
 
 import store, { RootState } from '../stores/store';
 import { updateClient, resetClient } from '../stores/client-reducer';
 
-import { Financing } from '../services/types/property-attributes.type';
-import ImageRadio from '../components/image-radio';
-import ColorSwitch from '../components/color-switch';
-import CurrencyFormat from '../components/currency-format';
-import DateMask from '../components/date-mask';
-import ErrorMessage from '../components/error-message';
 
-import mockData from '../test/mock-data';
-import { Translate } from '@material-ui/icons';
 
 export default function Home() {
 
@@ -36,7 +25,6 @@ export default function Home() {
 
   const history = useHistory();
 
-  const date0 = new Date(0);
 
   const renovationTypes = [{
     value: '',
