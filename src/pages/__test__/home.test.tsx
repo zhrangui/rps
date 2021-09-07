@@ -1,11 +1,11 @@
 import { useTheme } from '@material-ui/core';
 import { render, screen } from '@testing-library/react';
 import { useSelector } from 'react-redux';
-import theme from '../theme';
-import Home from './home';
+import theme from '../../theme';
+import Home from '../home';
 
-import Test from '../test/test';
-import mockData from '../test/mock-data';
+import Test from '../../test/test';
+import mockData from '../../test/mock-data';
 
 const mockStore = {
   address: {

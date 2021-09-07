@@ -47,7 +47,6 @@ export default function AppBar() {
         </Toolbar>
       </MuiAPpBar>
       <Toolbar id="back-to-top-anchor" />
-      <Banner />
       <SideBar ref={sideBarRef} />
     </>
   );

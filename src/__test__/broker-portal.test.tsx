@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import BrokerPortal from './broker-portal';
+import BrokerPortal from '../broker-portal';
 
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"),

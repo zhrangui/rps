@@ -10,7 +10,6 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 import AppBar from './components/app-bar';
 import Home from './pages/home';
-import PropertyEstimate from './pages/property-estimate';
 
 import { toTitleCase } from './common/utils';
 
@@ -55,7 +54,6 @@ function BrokerPortal() {
               <Home />
             </Route>
             <Route path="/search result">
-              <PropertyEstimate />
             </Route>
           </Switch>
         </Container>
