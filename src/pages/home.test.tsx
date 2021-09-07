@@ -4,8 +4,8 @@ import { useSelector } from 'react-redux';
 import theme from '../theme';
 import Home from './home';
 
-import Test from '../tests/test';
-import mockData from '../tests/mock-data';
+import Test from '../test/test';
+import mockData from '../test/mock-data';
 
 const mockStore = {
   address: {

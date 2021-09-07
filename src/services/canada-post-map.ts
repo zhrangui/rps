@@ -1,5 +1,5 @@
-import { saveAddress } from "../store/client-reducer";
-import store from "../store/store";
+import { saveAddress } from "../stores/client-reducer";
+import store from "../stores/store";
 import { Address } from "./types/property-request.type";
 
 declare var pca: any;

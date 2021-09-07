@@ -14,10 +14,10 @@ import PropertyEstimate from './pages/property-estimate';
 
 import { toTitleCase } from './common/utils';
 
-import './real-value.scss';
+import './broker_portal.scss';
 import Footer from './components/footer';
 
-function RealVaue() {
+function BrokerPortal() {
 
   const { t } = useTranslation();
   const location = useLocation();
@@ -65,4 +65,4 @@ function RealVaue() {
   );
 }
 
-export default RealVaue;
+export default BrokerPortal;

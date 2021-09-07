@@ -24,7 +24,7 @@ const fontFamily = [
 
 const theme = createTheme({
   palette: {
-    text: {
+        text: {
       primary: '#262b2d'
     },
     rpsDarkBlue: {
@@ -41,46 +41,12 @@ const theme = createTheme({
     }
   },
   typography: {
-    body1: {
-      fontSize: 14
-    },
-    button: {
-      textTransform: 'none'
-    },
-    h2: {
-      fontFamily: fontFamily,
-      fontWeight: 'bold',
-      fontSize: 26,
-      color: 'black'
-    },
-    h3: {
-      fontFamily: fontFamily,
-      fontWeight: 'bold',
-      fontSize: 20,
-    },
-    h4: {
-      fontSize: 18,
-      fontWeight: 'bold',
-      color: 'black'
-    },
-    h5: {
-      fontWeight: 'bold',
-      fontSize: 16
-    },
-    h6: {
-      fontSize: 12,
-      fontWeight: 'bold',
-      color: '#888e9f'
-    }
+    
   },
   components: {
     MuiButton: {
       styleOverrides: {
         containedSecondary: {
-          backgroundColor: green[500],
-          '&:hover': {
-            backgroundColor: green[500]
-          }
         }
       }
     }

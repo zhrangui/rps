@@ -1,10 +1,10 @@
 import axios from 'axios';
-import store from '../store/store';
-import { saveProperty } from '../store/server-reducer';
+import store from '../stores/store';
+import { saveProperty } from '../stores/server-reducer';
 import PrpertyRequest from './types/property-request.type';
 import ProperyResponse from './types/property-response.type';
 
-import mockData from "../tests/mock-data";
+import mockData from "../test/mock-data";
 
 const httpClient = axios.create({
   baseURL: process.env.REACT_APP_REAL_VALUE_API,

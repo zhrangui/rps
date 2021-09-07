@@ -11,7 +11,7 @@ import HtmlTooltip from '../components/html-tooltip';
 import Bar from '../components/chart/bar';
 import Spline from '../components/chart/spline';
 
-import { RootState } from '../store/store';
+import { RootState } from '../stores/store';
 import { PropertyStyle } from '../services/types/property-response.type';
 import { mapStyleMonth, maptAttributes } from '../services/property-services';
 import { formatCurrency } from '../common/internationalization';

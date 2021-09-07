@@ -15,8 +15,8 @@ import { getPropertyResponse } from '../services/http-client';
 import PropertyRequest from '../services/types/property-request.type';
 import { PropertyStyle } from '../services/types/property-response.type';
 
-import store, { RootState } from '../store/store';
-import { updateClient, resetClient } from '../store/client-reducer';
+import store, { RootState } from '../stores/store';
+import { updateClient, resetClient } from '../stores/client-reducer';
 
 import { Financing } from '../services/types/property-attributes.type';
 import ImageRadio from '../components/image-radio';
@@ -25,7 +25,7 @@ import CurrencyFormat from '../components/currency-format';
 import DateMask from '../components/date-mask';
 import ErrorMessage from '../components/error-message';
 
-import mockData from '../tests/mock-data';
+import mockData from '../test/mock-data';
 import { Translate } from '@material-ui/icons';
 
 export default function Home() {

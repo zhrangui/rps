@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import RealVaue from './real-value';
+import '@testing-library/jest-dom/extend-expect';
+import BrokerPortal from './broker-portal';
 
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"),
@@ -9,7 +10,7 @@ jest.mock("react-router-dom", () => ({
 }));
 
 test('renders RealValue', () => {
-  render(<RealVaue />);
+  render(<BrokerPortal />);
   const linkElement = screen.getByText(/learn react/i);
   expect(linkElement).toBeInTheDocument();
 });
