@@ -15,6 +15,7 @@ import { toTitleCase } from './utils/utils';
 
 import './broker_portal.scss';
 import Footer from './components/footer';
+import NavLinks from './components/nav-links';
 
 function BrokerPortal() {
 
@@ -26,26 +27,7 @@ function BrokerPortal() {
     <>
       <AppBar />
         <Container>
-          <Breadcrumbs
-            separator={<NavigateNextIcon fontSize="small" />}
-           >
-            <Link color="inherit" href="/">
-              {t('Home')}
-            </Link>
-            {pathnames.map((value, index) => {
-              const last = index === pathnames.length - 1
-              const to = `/${pathnames.slice(0, index + 1).join('/')}`
-              return last ? (
-                <Typography color="textPrimary" key={to}>
-                  {t(toTitleCase(value))}
-                </Typography>
-              ) : (
-                <Link color="inherit" component={RouterLink} to="/" key={to}>
-                  {t(toTitleCase(value))}
-                </Link>
-              )
-            })}
-          </Breadcrumbs>
+          <NavLinks/>
           <Switch>
             <Route exact path="/">
               <Home />
@@ -54,7 +36,6 @@ function BrokerPortal() {
             </Route>
           </Switch>
         </Container>
-      <Footer />
     </>
   );
 }

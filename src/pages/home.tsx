@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { useHistory } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 import { useTranslation } from 'react-i18next';
-import { Stack, useTheme } from '@mui/material';
+import { Accordion, AccordionDetails, AccordionSummary, Container, Grid, Stack, Typography, useTheme } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useForm } from 'react-hook-form';
 
 import CanadaPostMap from '../services/canada-post-map';
@@ -112,12 +113,62 @@ export default function Home() {
       setLoading(false);
     });
   };
-
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <Stack spacing={2}>
-
-      </Stack >
-    </form >
+    <>
+      <Accordion
+        sx={{
+          backgroundColor: '#e3e3e3'
+        }}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          id="panel-header">
+          <Typography variant="h5">
+            Welcome to RPS ACCESS, the leading appraisal order solution.
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            <b>Appraisal Delays</b>
+            RPS is working closely with our appraiser network to meet the current appraisal volumes. To help, please provide all the information and documentation up front to keep the process moving as quickly as possible. Thank you for your understanding if you experience a delayed response from our Broker Specialist Team. Your order is important to us and we will do our very best to get back to you.
+          </Typography>
+          <Typography>
+            <b>Broker Webinars</b>
+            Check out our upcoming webinars including another accredited webinar and watch all the replays here.
+            <Link to="https://lp.constantcontactpages.com/cu/KvBuYmU/BrokerWebinars">
+              View the Webinar Calendar
+            </Link>
+          </Typography>
+          <Typography>
+            <b>Homeowner Video</b>
+            Here's a short video for homeowners that explains what to expect during the Appraisal process. You can share this with your client to help ensure the process goes as smoothly as possible
+            <Link to="https://youtu.be/Q30DdT4v4nU">
+              Watch Video
+            </Link>
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Grid container
+        my={2}>
+        <Grid item
+          xs={8}>
+          <Typography
+            variant="h5"
+            color='#56befb'>
+            MEET OUR BROKER TEAM
+          </Typography>
+          <Grid>
+            
+          </Grid>
+        </Grid>
+        <Grid item
+          xs={4}>
+          <Typography
+            variant="h5"
+            color='#56befb'>
+            OUR LENDER PARTNERS
+          </Typography>
+        </Grid>
+      </Grid>
+    </>
   );
 }
