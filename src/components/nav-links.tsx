@@ -6,7 +6,7 @@ export default function NavLinks() {
     <Grid container
       spacing={2}>
       <Grid item>
-        <Link href="#/home" underline="hover">Home</Link>
+        <Link href="#" underline="hover">Home</Link>
       </Grid>
       <Grid item>
         <Link href="#/my dashboard" underline="hover">My Dashboard</Link>

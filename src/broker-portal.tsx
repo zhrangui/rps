@@ -13,7 +13,7 @@ import Home from './pages/home';
 
 import { toTitleCase } from './utils/utils';
 
-import './broker_portal.scss';
+import './broker-portal.scss';
 import Footer from './components/footer';
 import NavLinks from './components/nav-links';
 
@@ -26,16 +26,16 @@ function BrokerPortal() {
   return (
     <>
       <AppBar />
-        <Container>
-          <NavLinks/>
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/search result">
-            </Route>
-          </Switch>
-        </Container>
+      <Container>
+        <NavLinks />
+        <Switch>
+          <Route path={['/', '/home']}>
+            <Home />
+          </Route>
+          <Route path="/search result">
+          </Route>
+        </Switch>
+      </Container>
     </>
   );
 }
