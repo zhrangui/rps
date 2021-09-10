@@ -1,7 +1,6 @@
 import { Grid, Link } from '@mui/material';
 
-export default function NavLinks() {
-
+const NavLinks: React.FC = () => {
   return (
     <Grid container
       spacing={2}>
@@ -26,3 +25,5 @@ export default function NavLinks() {
     </Grid>
   );
 }
+
+export default NavLinks;

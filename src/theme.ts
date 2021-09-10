@@ -37,7 +37,7 @@ const theme = createTheme({
       main: '#00b0f0'
     },
     rpsLightAzure: {
-      main: '#04b4f4'
+      main: '#56befb'
     }
   },
   typography: {

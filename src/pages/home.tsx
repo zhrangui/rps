@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useHistory } from "react-router-dom"
 import { useTranslation } from 'react-i18next';
-import { Accordion, AccordionDetails, AccordionSummary, Container, Grid, Stack, Typography, useTheme } from '@mui/material';
+import { Accordion, AccordionDetails, AccordionSummary, Card, CardContent, CardMedia, Container, Grid, Paper, Stack, Typography, useTheme } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useForm } from 'react-hook-form';
 
@@ -15,6 +15,7 @@ import PropertyRequest from '../services/types/property-request.type';
 
 import store, { RootState } from '../stores/store';
 import { updateClient, resetClient } from '../stores/client-reducer';
+import ImgageCard from '../components/image-card';
 
 
 
@@ -62,6 +63,34 @@ export default function Home() {
     label: t('Pool')
   }];
 
+  const partners = [
+    "Alterna Bank",
+    "Alterna Savings",
+    "ATB Financial",
+    "B2B Bank",
+    "Bridgewater",
+    "CMLS",
+    "CMLS Adapt",
+    "CMLS Attain",
+    "CMLS Aveo",
+    "First National",
+    "Lendwise",
+    "Manulife",
+    "MCAN/XMC",
+    "MCAP",
+    "Meridian",
+    "Merix",
+    "Nesto",
+    "Paradigm",
+    "People’s Bank",
+    "Private Lender",
+    "RFA",
+    "RMG",
+    "TD Bank",
+    "Verico LifeCycle",
+    "Wealth One",
+    "Westbor"
+  ]
   let address = useSelector((state: RootState) => state.client.address);
 
   let { originalValue, originalDate, propertyStyle, numMonthsTrend, renovationChecked, renovationType, renovationAmount, renovationDate } = useSelector((state: RootState) => state.client);
@@ -116,6 +145,7 @@ export default function Home() {
   return (
     <>
       <Accordion
+        defaultExpanded
         sx={{
           backgroundColor: '#e3e3e3'
         }}>
@@ -148,27 +178,109 @@ export default function Home() {
         </AccordionDetails>
       </Accordion>
       <Grid container
-        my={2}>
+        my={2}
+        spacing={2}>
         <Grid item
-          xs={8}>
+          sm={8}>
           <Typography
             variant="h5"
-            color='#56befb'>
+            color='rpsLightAzure.main'>
             MEET OUR BROKER TEAM
           </Typography>
+          <Grid my={2}>
+            <Typography
+              color='rpsLightAzure.main'>
+              Meet our Specialist Team
+            </Typography>
+            <Typography>
+              If you need support for an order in progress, please contact our Broker Specialist Team
+            </Typography>
+          </Grid>
+          <Grid container
+            justifyContent="space-around"
+            spacing={3}
+          >
+            <Grid item>
+              <ImgageCard url="https://access-uat.rpsrealsolutions.com/BrokerAccess/assets/team/Elenie.jpg"
+                content={['Eleni Xindaris', 'Broker Specialist', '1-866-545-7555']}
+                email="mailto:brokersupport@rpsrealsolutions.com" />
+            </Grid>
+            <Grid item>
+              <ImgageCard url="https://access-uat.rpsrealsolutions.com/BrokerAccess/assets/team/Suzette.png"
+                content={['Suzette Hoyle', 'Broker Specialist Lead', '1-866-545-7555']}
+                email="mailto:brokersupport@rpsrealsolutions.com" />
+            </Grid>
+          </Grid>
           <Grid>
-            
+            <Typography
+              color='rpsLightAzure.main'>
+              Meet our Sales Team
+            </Typography>
+            <Typography>
+              If you are new to RPS, want help to get started or book a meeting, please contact our Sales Team
+            </Typography>
+          </Grid>
+          <Grid container
+            justifyContent="space-around"
+            spacing={3}
+            my={2}>
+            <Grid item>
+              <ImgageCard url="https://access-uat.rpsrealsolutions.com/BrokerAccess/assets/team/Sabrina.jpg"
+                content={['Sabrina Smith', 'Quebec', '514-463-1110', 'Email here']}
+                email="mailto:sabrina.smith@rpsrealsolutions.com" />
+            </Grid>
+            <Grid item>
+              <ImgageCard url="https://access-uat.rpsrealsolutions.com/BrokerAccess/assets/team/MarkLange.jpg"
+                content={['Mark Lange', 'Ottawa & SWO', '416-460-9360']}
+                email="mailto:mark.lange@rpsrealsolutions.com" />
+            </Grid>
+            <Grid item>
+              <ImgageCard url="https://access-uat.rpsrealsolutions.com/BrokerAccess/assets/team/GitaCartwright.jpg"
+                content={['Gita Cartwright', 'Ontario & Atlantic', '647-521-9345']}
+                email="mailto:gita.cartwright@rpsrealsolutions.com" />
+            </Grid>
+          </Grid>
+          <Grid container
+            justifyContent="space-around"
+            spacing={3}>
+            <Grid item>
+              <ImgageCard url="https://access-uat.rpsrealsolutions.com/BrokerAccess/assets/team/Andrea.jpg"
+                content={['Andrea Smith', 'Senior Vice President, Business', 'Development']} />
+            </Grid>
+            <Grid item>
+              <ImgageCard url="https://access-uat.rpsrealsolutions.com/BrokerAccess/assets/team/Joel.jpg"
+                content={['Joel Bates', 'President']} />
+            </Grid>
           </Grid>
         </Grid>
         <Grid item
-          xs={4}>
+          sm={4}>
           <Typography
             variant="h5"
-            color='#56befb'>
+            color='rpsLightAzure.main'>
             OUR LENDER PARTNERS
           </Typography>
+          <Typography
+            color='rpsLightAzure.main'>
+            Lender Partner
+          </Typography>
+          <Grid container
+            spacing={2}>
+            {
+              partners.map((partner, index) =>
+                <Grid item
+                  key={partner + index}
+                  xs={6}>
+                  <Paper variant="outlined" square >
+                    {partner}
+                  </Paper>
+                </Grid>
+              )
+            }
+          </Grid>
         </Grid>
       </Grid>
     </>
   );
 }
+
