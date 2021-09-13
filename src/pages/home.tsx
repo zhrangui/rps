@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link, useHistory } from "react-router-dom"
+import { useHistory } from "react-router-dom"
 import { useTranslation } from 'react-i18next';
 import { Accordion, AccordionDetails, AccordionSummary, Card, CardContent, CardMedia, Container, Grid, Paper, Stack, Typography, useTheme } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -164,16 +164,16 @@ export default function Home() {
           <Typography>
             <b>Broker Webinars</b>
             Check out our upcoming webinars including another accredited webinar and watch all the replays here.
-            <Link to="https://lp.constantcontactpages.com/cu/KvBuYmU/BrokerWebinars">
+            <a href="https://lp.constantcontactpages.com/cu/KvBuYmU/BrokerWebinars" target="_blank" rel="noopener noreferrer">
               View the Webinar Calendar
-            </Link>
+            </a>
           </Typography>
           <Typography>
             <b>Homeowner Video</b>
             Here's a short video for homeowners that explains what to expect during the Appraisal process. You can share this with your client to help ensure the process goes as smoothly as possible
-            <Link to="https://youtu.be/Q30DdT4v4nU">
-              Watch Video
-            </Link>
+            <a href="https://youtu.be/Q30DdT4v4nU" target="_blank" rel="noopener noreferrer">
+              View the Webinar Calendar
+            </a>
           </Typography>
         </AccordionDetails>
       </Accordion>
