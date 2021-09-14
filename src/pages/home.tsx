@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useHistory } from "react-router-dom"
 import { useTranslation } from 'react-i18next';
-import { Accordion, AccordionDetails, AccordionSummary, Card, CardContent, CardMedia, Container, Grid, Paper, Stack, Typography, useTheme } from '@mui/material';
+import { Accordion, AccordionDetails, AccordionSummary, Grid, Paper, Typography, useTheme } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useForm } from 'react-hook-form';
 
