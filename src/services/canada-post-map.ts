@@ -1,4 +1,3 @@
-import { saveAddress } from "../stores/client-reducer";
 import store from "../stores/store";
 import { Address } from "./types/property-request.type";
 
@@ -32,8 +31,6 @@ export default function CanadaPostMap(elementID = 'address-complete') {
       postalCode: canadaPostAddress.PostalCode,
       fullAddress: `${canadaPostAddress.Line1}, ${canadaPostAddress.City}, ${canadaPostAddress.Province}, ${canadaPostAddress.PostalCode}`
     }
-
-    store.dispatch(saveAddress(address));
 
     return address;
   }

@@ -1,57 +1,21 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { Financing } from '../services/types/property-attributes.type';
-import { Address } from '../services/types/property-request.type';
-import { PropertyStyle } from '../services/types/property-response.type';
 
 interface State {
-  address: Address,
-  originalValue: string,
-  originalDate: Date | null
-  propertyStyle: PropertyStyle,
-  financing?: Financing,
-  numMonthsTrend: number,
-  renovationChecked: boolean,
-  renovationType: string,
-  renovationAmount: string,
-  renovationDate: Date | null
+  dashboard: object
 }
 
 const initialState: State = {
-  address: {
-    unitNumber: '',
-    streetNumber: '',
-    streetName: '',
-    streetType: '',
-    streetDirection: '',
-    city: '',
-    province: '',
-    postalCode: '',
-    fullAddress: ''
-  },
-  originalValue: '',
-  originalDate: null,
-  propertyStyle: 0,
-  numMonthsTrend: 60,
-  renovationChecked: false,
-  renovationType: '',
-  renovationAmount: '',
-  renovationDate: null
+  dashboard: {}
 }
 
 const clientSlice = createSlice({
   name: 'client',
   initialState,
   reducers: {
-    saveAddress: (state, action: { payload: Address }) => {
+    saveDashboard: (state, action: { payload: object }) => {
       return {
         ...state,
-        address: action.payload
-      };
-    },
-    updateClient: (state, action: { payload: {} }) => {
-      return {
-        ...state,
-        ...action.payload
+        dashboard: action.payload
       };
     },
     resetClient: (state) => {
@@ -65,5 +29,5 @@ const clientSlice = createSlice({
 
 const { actions, reducer } = clientSlice;
 
-export const { saveAddress, updateClient, resetClient } = actions;
+export const { saveDashboard, resetClient } = actions;
 export default reducer;

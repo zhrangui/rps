@@ -1,5 +1,5 @@
-import { httpClient, getPropertyResponse } from './http-client';
-import mockData from "../test/mock-data";
+import { httpClient, getPropertyResponse } from '../http-client';
+import mockData from "../../test/mock-data";
 
 test('getValuation', async () => {
   httpClient.post = jest.fn().mockResolvedValue({

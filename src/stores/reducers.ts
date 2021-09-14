@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import clientReduceer from './client-reducer';
-import properyReducer from './server-reducer';
+import serverReducer from './server-reducer';
 
 const rootReducer = combineReducers({
   client: clientReduceer,
-  server: properyReducer
+  server: serverReducer
 })
 
 export default rootReducer;

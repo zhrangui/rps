@@ -11,11 +11,9 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import AppBar from './components/app-bar';
 import Home from './pages/home';
 
-import { toTitleCase } from './utils/utils';
-
 import './broker-portal.scss';
-import Footer from './components/footer';
 import NavLinks from './components/nav-links';
+import Dashboard from './pages/dashboard';
 
 function BrokerPortal() {
 
@@ -29,10 +27,11 @@ function BrokerPortal() {
       <Container>
         <NavLinks />
         <Switch>
-          <Route path={['/', '/home']}>
+          <Route exact path={['/', '/home']}>
             <Home />
           </Route>
-          <Route path="/search result">
+          <Route exact path="/my dashboard">
+            <Dashboard />
           </Route>
         </Switch>
       </Container>

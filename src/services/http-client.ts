@@ -1,8 +1,6 @@
 import axios from 'axios';
 import store from '../stores/store';
-import { saveProperty } from '../stores/server-reducer';
-import PrpertyRequest from './types/property-request.type';
-import ProperyResponse from './types/property-response.type';
+import { saveDashboard } from '../stores/client-reducer';
 
 import mockData from "../test/mock-data";
 
@@ -11,19 +9,19 @@ const httpClient = axios.create({
   timeout: 10000
 });
 
-const getPropertyResponse = (propertyRequest: PrpertyRequest) => {
-  return httpClient.post<ProperyResponse>("api/Data/Valuation", propertyRequest)
+const getDashboard = (id: string) => {
+  return httpClient.post("access-qa.rpsrealsolutions.com/api/Orders/" + id)
     .then(response => {
-      store.dispatch(saveProperty(response.data));
+      store.dispatch(saveDashboard(response.data));
       return response;
     })
     .catch(e => {
       console.error(e);
-      store.dispatch(saveProperty(mockData.propertyResponse));
+      store.dispatch(saveDashboard(mockData.dashboard));
     })
 }
 
 export {
   httpClient,
-  getPropertyResponse
+  getDashboard
 };
