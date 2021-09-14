@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 interface State {
-  dashboard: object
+  dashboard: any
 }
 
 const initialState: State = {
@@ -12,7 +12,7 @@ const clientSlice = createSlice({
   name: 'client',
   initialState,
   reducers: {
-    saveDashboard: (state, action: { payload: object }) => {
+    saveDashboard: (state, action: { payload: any }) => {
       return {
         ...state,
         dashboard: action.payload

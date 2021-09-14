@@ -24,14 +24,14 @@ const fontFamily = [
 
 const theme = createTheme({
   palette: {
-        text: {
+    text: {
       primary: '#262b2d'
     },
     rpsDarkBlue: {
       main: '#04446c'
     },
     rpsLightGray: {
-      main: '#888e9f'
+      main: '#bebebe'
     },
     rpsAzure: {
       main: '#00b0f0'
@@ -41,7 +41,7 @@ const theme = createTheme({
     }
   },
   typography: {
-    
+
   },
   components: {
     MuiButton: {
